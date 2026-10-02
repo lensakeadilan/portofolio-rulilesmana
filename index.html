@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Ruli Lesmana</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        agri: {
+                            light: '#dcfce7',
+                            DEFAULT: '#22c55e',
+                            dark: '#166534',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-agri selection:text-white">
+
+    <!-- 1. Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Nama -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-agri-dark tracking-tight">Ruli Lesmana</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-agri font-medium transition-colors">Beranda</a>
+                    <a href="#keahlian" class="text-gray-600 hover:text-agri font-medium transition-colors">Keahlian</a>
+                    <a href="#karya" class="text-gray-600 hover:text-agri font-medium transition-colors">Galeri Proyek</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-agri focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-agri hover:bg-agri-light">Beranda</a>
+                <a href="#keahlian" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-agri hover:bg-agri-light">Keahlian</a>
+                <a href="#karya" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-agri hover:bg-agri-light">Galeri Proyek</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section id="beranda" class="pt-28 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col-reverse md:flex-row items-center gap-12">
+            <!-- Teks -->
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-lg text-agri font-medium mb-2">Halo, Saya</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+                    Ruli Lesmana
+                </h1>
+                <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0">
+                    Siswa jurusan <span class="font-semibold text-agri-dark">Agribisnis Pengolahan Hasil Pertanian (APHP)</span> di SMK Negeri Bojonggambir. Saya bersemangat menciptakan inovasi produk pangan yang sehat, aman, dan bernilai ekonomis tinggi.
+                </p>
+                <a href="#karya" class="inline-block bg-agri hover:bg-agri-dark text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-green-200 transition-all duration-300 transform hover:-translate-y-1">
+                    Lihat Karya
+                </a>
+            </div>
+            
+            <!-- Foto Profil -->
+            <div class="flex-1 flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-agri rounded-full blur-xl opacity-30 transform scale-110"></div>
+                    <!-- Catatan: Menambahkan fallback onerror jika link berupa page view, bukan direct image file -->
+                    <img src="https://ibb.co.com/sdmXyHDR" 
+                         alt="Foto Profil Ruli Lesmana" 
+                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl z-10"
+                         onerror="this.src='https://ui-avatars.com/api/?name=Ruli+Lesmana&background=22c55e&color=fff&size=512'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skill / Keahlian Section -->
+    <section id="keahlian" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Keahlian Saya</h2>
+                <div class="w-20 h-1 bg-agri mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Kompetensi yang saya pelajari dan kembangkan di sekolah.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 bg-agri-light text-agri rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pengolahan Hasil Nabati</h3>
+                    <p class="text-gray-600">Mampu memproduksi, mengawetkan, dan mengemas olahan berbahan dasar tanaman, sayur, dan buah-buahan seperti selai, keripik, dan manisan.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 bg-agri-light text-agri rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pengolahan Hasil Hewani</h3>
+                    <p class="text-gray-600">Terampil dalam memproses bahan baku daging, susu, dan telur menjadi produk olahan berkualitas tinggi seperti sosis, nugget, dan yoghurt.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 bg-agri-light text-agri rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Keamanan Pangan (GMP/HACCP)</h3>
+                    <p class="text-gray-600">Menerapkan prinsip sanitasi industri dan standar Good Manufacturing Practices untuk memastikan produk pangan higienis dan layak konsumsi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Galeri Proyek Section -->
+    <section id="karya" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Galeri Proyek & Tugas</h2>
+                <div class="w-20 h-1 bg-agri mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Beberapa hasil praktik pengolahan produk pangan yang saya buat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyek 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Minuman Probiotik Yoghurt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-agri-dark">Hasil Hewani</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fermentasi Yoghurt Susu Sapi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Praktik pembuatan yoghurt menggunakan bakteri asam laktat dengan menjaga suhu inkubasi yang presisi agar tekstur dan rasa optimal.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Inovasi Keripik Sayur" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-agri-dark">Hasil Nabati</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Inovasi Keripik Bayam Krispi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Pengolahan pascapanen sayur bayam menjadi camilan sehat bernilai jual. Fokus pada teknik deep frying dan penirisan minyak (spinner).</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pembuatan Roti Manis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-agri-dark">Pangan Olahan</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Produksi Roti Manis Komersial</h3>
+                        <p class="text-gray-600 text-sm mb-4">Tugas akhir mata pelajaran kewirausahaan memproduksi roti manis dengan formulasi ragi yang tepat, pemanggangan, hingga proses packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2026 Ruli Lesmana. All rights reserved.</p>
+            <p class="text-sm">SMK Negeri Bojonggambir - Jurusan Agribisnis Pengolahan Hasil Pertanian.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk fungsionalitas Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            // Toggle menu visibility
+            menu.classList.toggle('hidden');
+            
+            // Ubah ikon hamburger menjadi 'X' saat menu terbuka
+            if (menu.classList.contains('hidden')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger icon
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Close (X) icon
+            }
+        });
+
+        // Tutup menu otomatis jika salah satu link di klik (untuk mobile)
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+    </script>
+</body>
+</html>
